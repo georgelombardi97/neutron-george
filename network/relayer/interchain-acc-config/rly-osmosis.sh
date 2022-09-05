@@ -36,7 +36,7 @@ $BINARY keys restore osmo-test-4 test-1 "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER
 
 echo "Linking both chains..."
 #$BINARY tx link test1-account-osmosis-test-4 --home $CHAIN_DIR/$RELAYER_DIR
-$BINARY tx link test1-osmotest4 --home $CHAIN_DIR/$RELAYER_DIR
+$BINARY tx link test1-osmotest4 --home $CHAIN_DIR/$RELAYER_DIR --debug
 #
 #echo "Starting to listen relayer..."
 $BINARY start test1-osmotest4 --home $CHAIN_DIR/$RELAYER_DIR
