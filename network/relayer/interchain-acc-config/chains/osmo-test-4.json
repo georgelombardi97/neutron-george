@@ -1,0 +1,16 @@
+{
+  "type": "cosmos",
+  "value": {
+    "key": "osmo-test-4",
+    "chain-id": "osmo-test-4",
+    "rpc-addr": "https://osmosistest-rpc.quickapi.com:443",
+    "account-prefix": "osmo",
+    "keyring-backend": "test",
+    "gas-adjustment": 2.0,
+    "gas-prices": "0.025uosmo",
+    "debug": true,
+    "timeout": "300s",
+    "output-format": "json",
+    "sign-mode": "direct"
+  }
+}

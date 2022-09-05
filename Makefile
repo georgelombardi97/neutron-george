@@ -185,6 +185,15 @@ init: kill-dev install
 	./network/hermes/restore-keys.sh
 	./network/hermes/create-conn.sh
 
+init-single-node: kill-dev install
+	@echo "Initializing single blockchain..."
+	./network/init-single-node.sh
+	./network/start-single.sh
+	@echo "Initializing relayer..."
+	./network/relayer/interchain-acc-config/rly-osmosis.sh
+# 	./network/hermes/restore-keys.sh
+# 	./network/hermes/create-conn.sh
+
 init-golang-rly: kill-dev install
 	@echo "Initializing both blockchains..."
 	./network/init.sh
