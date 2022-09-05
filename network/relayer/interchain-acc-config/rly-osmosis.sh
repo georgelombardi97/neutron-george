@@ -39,4 +39,4 @@ echo "Linking both chains..."
 $BINARY tx link test1-osmotest4 --home $CHAIN_DIR/$RELAYER_DIR
 #
 #echo "Starting to listen relayer..."
-#$BINARY start test1-account-osmosis-test-4 --home $CHAIN_DIR/$RELAYER_DIR
+$BINARY start test1-osmotest4 --home $CHAIN_DIR/$RELAYER_DIR
