@@ -187,7 +187,7 @@ init: kill-dev install
 
 init-single-node: kill-dev install
 	@echo "Initializing single blockchain..."
-	./network/init-single-node.sh
+	./network/init-single.sh
 	./network/start-single.sh
 	@echo "Initializing relayer..."
 	./network/relayer/interchain-acc-config/rly-osmosis.sh
