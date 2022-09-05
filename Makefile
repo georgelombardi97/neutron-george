@@ -208,7 +208,7 @@ start-rly:
 
 kill-dev:
 	@echo "Killing neutrond and removing previous data"
-	-@killall neutrond 2>/dev/null
+	-@pkill -9 -f neutrond 2>/dev/null
 	-@rm -rf ./data
 
 build-docker-image:
