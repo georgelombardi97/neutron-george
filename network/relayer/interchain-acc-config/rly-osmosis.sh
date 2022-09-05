@@ -20,20 +20,21 @@ $BINARY config init --home $CHAIN_DIR/$RELAYER_DIR
 echo "Adding configurations for both chains..."
 $BINARY chains add -f $PWD/network/relayer/interchain-acc-config/chains/test-1.json --home $CHAIN_DIR/$RELAYER_DIR
 $BINARY chains add -f $PWD/network/relayer/interchain-acc-config/chains/osmo-test-4.json --home $CHAIN_DIR/$RELAYER_DIR
-#$BINARY config add-paths $PWD/network/relayer/interchain-acc-config/paths --home $CHAIN_DIR/$RELAYER_DIR
+echo "Adding configurations for paths..."
+$BINARY paths add-dir $PWD/network/relayer/interchain-acc-config/paths --home $CHAIN_DIR/$RELAYER_DIR
 
 echo "Restoring accounts..."
 $BINARY keys restore test-1 test-1 "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER_DIR
 $BINARY keys restore osmo-test-4 test-1 "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER_DIR
-#$BINARY keys restore test-2 test-2 "$MNEMONIC_2" --home $CHAIN_DIR/$RELAYER_DIR
 
-echo "Initializing light clients for both chains..."
-$BINARY light init test-1 -f --home $CHAIN_DIR/$RELAYER_DIR
-$BINARY light init osmo-test-4 -f --home $CHAIN_DIR/$RELAYER_DIR
+#echo "Initializing light clients for both chains..."
+#$BINARY tx init test-1 -f --home $CHAIN_DIR/$RELAYER_DIR
+#$BINARY light init test-1 -f --home $CHAIN_DIR/$RELAYER_DIR
+#$BINARY light init osmo-test-4 -f --home $CHAIN_DIR/$RELAYER_DIR
 #$BINARY light init test-2 -f --home $CHAIN_DIR/$RELAYER_DIR
 
 echo "Linking both chains..."
 $BINARY tx link test1-account-osmosis-test-4 --home $CHAIN_DIR/$RELAYER_DIR
-
-echo "Starting to listen relayer..."
-$BINARY start test1-account-osmosis-test-4 --home $CHAIN_DIR/$RELAYER_DIR
+#
+#echo "Starting to listen relayer..."
+#$BINARY start test1-account-osmosis-test-4 --home $CHAIN_DIR/$RELAYER_DIR
