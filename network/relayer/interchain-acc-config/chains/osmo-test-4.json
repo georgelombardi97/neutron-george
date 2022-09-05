@@ -1,7 +1,7 @@
 {
   "type": "cosmos",
   "value": {
-    "key": "osmo-test-4",
+    "key": "test-1",
     "chain-id": "osmo-test-4",
     "rpc-addr": "https://osmosistest-rpc.quickapi.com:443",
     "account-prefix": "osmo",
