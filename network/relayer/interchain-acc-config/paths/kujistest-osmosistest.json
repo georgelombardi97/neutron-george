@@ -1,13 +1,24 @@
 {
   "dst": {
-    "chain-id": "harpoon-4"
+    "chain-id": "harpoon-4",
+    "client-id": "",
+    "connection-id": "",
+    "channel-id": "",
+    "port-id": "transfer",
+    "order": "ordered",
+    "version": "ics27-1"
   },
   "src": {
-    "chain-id": "osmo-test-4"
+    "chain-id": "osmo-test-4",
+    "client-id": "",
+    "connection-id": "",
+    "channel-id": "",
+    "port-id": "transfer",
+    "order": "ordered",
+    "version": "ics27-1"
   },
-  "src-channel-filter": {
-    "rule": null,
-    "channel-list": []
+  "strategy": {
+    "type": "naive"
   }
 }
 
