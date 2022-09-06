@@ -24,7 +24,7 @@ $BINARY chains add -f $PWD/network/relayer/interchain-acc-config/chains/osmo-tes
 
 echo "Adding configurations for paths..."
 #$BINARY paths add-dir $PWD/network/relayer/interchain-acc-config/paths --home $CHAIN_DIR/$RELAYER_DIR
-$BINARY paths add test-1 osmo-test-4 test1-osmotest4 -f $PWD/network/relayer/interchain-acc-config/paths/cosmostest-osmosistest.json --home $CHAIN_DIR/$RELAYER_DIR
+$BINARY paths add theta-testnet-001 osmo-test-4 cosmostest-osmosistest -f $PWD/network/relayer/interchain-acc-config/paths/cosmostest-osmosistest.json --home $CHAIN_DIR/$RELAYER_DIR
 
 echo "Restoring accounts..."
 $BINARY keys restore test-1 test-1 "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER_DIR
