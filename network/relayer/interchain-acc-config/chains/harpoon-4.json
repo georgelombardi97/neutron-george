@@ -3,7 +3,7 @@
   "value": {
     "key": "test-1",
     "chain-id": "harpoon-4",
-    "rpc-addr": "https://kujira-testnet-rpc.polkachu.com",
+    "rpc-addr": "https://kujira-testnet-rpc.polkachu.com:443",
     "account-prefix": "kujira",
     "keyring-backend": "test",
     "gas-adjustment": 2.0,
