@@ -1,0 +1,25 @@
+{
+  "src": {
+    "chain-id": "theta-testnet-001",
+    "client-id": "",
+    "connection-id": "",
+    "channel-id": "",
+    "port-id": "transfer",
+    "order": "ordered",
+    "version": "ics27-1"
+  },
+  "dst": {
+    "chain-id": "osmo-test-4",
+    "client-id": "",
+    "connection-id": "",
+    "channel-id": "",
+    "port-id": "transfer",
+    "order": "ordered",
+    "version": "ics27-1"
+  },
+  "strategy": {
+    "type": "naive"
+  }
+}
+
+
