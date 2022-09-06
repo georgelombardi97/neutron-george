@@ -9,7 +9,7 @@
     "gas-adjustment": 2.0,
     "gas-prices": "0.01uatom",
     "debug": true,
-    "timeout": "30s",
+    "timeout": "300s",
     "output-format": "json",
     "sign-mode": "direct"
   }
