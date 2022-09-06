@@ -19,7 +19,7 @@ mkdir $CHAIN_DIR || true
 $BINARY config init --home $CHAIN_DIR/$RELAYER_DIR
 
 echo "Adding configurations for both chains..."
-$BINARY chains add -f $PWD/network/relayer/interchain-acc-config/chains/kuji-testnet.json --home $CHAIN_DIR/$RELAYER_DIR
+$BINARY chains add -f $PWD/network/relayer/interchain-acc-config/chains/harpoon-4.json --home $CHAIN_DIR/$RELAYER_DIR
 $BINARY chains add -f $PWD/network/relayer/interchain-acc-config/chains/osmo-test-4.json --home $CHAIN_DIR/$RELAYER_DIR
 
 echo "Adding configurations for paths..."
