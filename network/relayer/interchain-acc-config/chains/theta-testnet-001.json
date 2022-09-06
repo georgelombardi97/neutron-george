@@ -3,7 +3,7 @@
   "value": {
     "key": "test-1",
     "chain-id": "theta-testnet-001",
-    "rpc-addr": "https://cosmos-testnet-rpc.allthatnode.com:26657",
+    "rpc-addr": "https://rpc.testnet.cosmos.network:443",
     "account-prefix": "cosmos",
     "keyring-backend": "test",
     "gas-adjustment": 2.0,
