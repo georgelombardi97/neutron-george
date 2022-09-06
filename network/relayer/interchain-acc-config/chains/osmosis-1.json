@@ -1,0 +1,16 @@
+{
+  "type": "cosmos",
+  "value": {
+    "key": "test-1",
+    "chain-id": "osmosis-1",
+    "rpc-addr": "https://osmosis-mainnet-rpc.allthatnode.com:26657",
+    "account-prefix": "osmo",
+    "keyring-backend": "test",
+    "gas-adjustment": 2.0,
+    "gas-prices": "0uosmo",
+    "debug": true,
+    "timeout": "300s",
+    "output-format": "json",
+    "sign-mode": "direct"
+  }
+}
