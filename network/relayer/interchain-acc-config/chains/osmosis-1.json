@@ -7,7 +7,7 @@
     "account-prefix": "osmo",
     "keyring-backend": "test",
     "gas-adjustment": 2.0,
-    "gas-prices": "0uosmo",
+    "gas-prices": "0.025uosmo",
     "debug": true,
     "timeout": "300s",
     "output-format": "json",
