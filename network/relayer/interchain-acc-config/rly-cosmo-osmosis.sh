@@ -15,7 +15,7 @@ if ! [ -x "$(command -v $BINARY)" ]; then
 fi
 
 echo "Initializing $BINARY..."
-mkdir CHAIN_DIR || true
+mkdir $CHAIN_DIR || true
 $BINARY config init --home $CHAIN_DIR/$RELAYER_DIR
 
 echo "Adding configurations for both chains..."
