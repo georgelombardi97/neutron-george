@@ -27,7 +27,7 @@ echo "Adding configurations for paths..."
 $BINARY paths add theta-testnet-001 osmo-test-4 cosmostest-osmosistest -f $PWD/network/relayer/interchain-acc-config/paths/cosmostest-osmosistest.json --home $CHAIN_DIR/$RELAYER_DIR
 
 echo "Restoring accounts..."
-$BINARY keys restore test-1 test-1 "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER_DIR
+$BINARY keys restore osmo-test-4 test-1 "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER_DIR
 $BINARY keys restore theta-testnet-001 test-1 "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER_DIR
 
 #echo "Initializing light clients for both chains..."
