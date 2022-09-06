@@ -24,11 +24,11 @@ $BINARY chains add -f $PWD/network/relayer/interchain-acc-config/chains/osmo-tes
 
 echo "Adding configurations for paths..."
 #$BINARY paths add-dir $PWD/network/relayer/interchain-acc-config/paths --home $CHAIN_DIR/$RELAYER_DIR
-$BINARY paths add kuji-testnet osmo-test-4 kujistest-osmosistest -f $PWD/network/relayer/interchain-acc-config/paths/kujistest-osmosistest.json --home $CHAIN_DIR/$RELAYER_DIR
+$BINARY paths add harpoon-4 osmo-test-4 kujistest-osmosistest -f $PWD/network/relayer/interchain-acc-config/paths/kujistest-osmosistest.json --home $CHAIN_DIR/$RELAYER_DIR
 
 echo "Restoring accounts..."
 $BINARY keys restore osmo-test-4 test-1 "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER_DIR
-$BINARY keys restore kuji-testnet test-1 "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER_DIR
+$BINARY keys restore harpoon-4 test-1 "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER_DIR
 
 #echo "Initializing light clients for both chains..."
 #$BINARY tx init test-1 -f --home $CHAIN_DIR/$RELAYER_DIR
