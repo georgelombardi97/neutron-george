@@ -1,8 +1,8 @@
 {
-  "src": {
+  "dst": {
     "chain-id": "test-1"
   },
-  "dst": {
+  "src": {
     "chain-id": "osmo-test-4"
   },
   "strategy": {

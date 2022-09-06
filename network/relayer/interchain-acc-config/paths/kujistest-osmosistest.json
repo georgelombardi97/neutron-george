@@ -1,5 +1,5 @@
 {
-  "dst": {
+  "src": {
     "chain-id": "harpoon-4",
     "client-id": "",
     "connection-id": "",
@@ -8,7 +8,7 @@
     "order": "ordered",
     "version": "ics27-1"
   },
-  "src": {
+  "dst": {
     "chain-id": "osmo-test-4",
     "client-id": "",
     "connection-id": "",
