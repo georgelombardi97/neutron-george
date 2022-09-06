@@ -6,7 +6,7 @@
     "channel-id": "",
     "port-id": "transfer",
     "order": "ordered",
-    "version": "ics27-1"
+    "version": "ics20-1"
   },
   "dst": {
     "chain-id": "osmo-test-4",
@@ -15,7 +15,7 @@
     "channel-id": "",
     "port-id": "transfer",
     "order": "ordered",
-    "version": "ics27-1"
+    "version": "ics20-1"
   },
   "strategy": {
     "type": "naive"
