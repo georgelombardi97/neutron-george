@@ -2,6 +2,7 @@ package keeper
 
 import (
 	"context"
+	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	"time"
 
 	"github.com/cosmos/cosmos-sdk/telemetry"
@@ -98,17 +99,35 @@ func (k Keeper) SubmitTx(goCtx context.Context, msg *ictxtypes.MsgSubmitTx) (*ic
 		return nil, sdkerrors.Wrap(channeltypes.ErrChannelCapabilityNotFound, "failed to GetCapability")
 	}
 
-	sdkMsgs, err := msg.GetTxMsgs()
-	if err != nil {
-		k.Logger(ctx).Debug("SubmitTx: failed to GetTxMsgs", "connection_id", msg.ConnectionId, "port_id", portID, "channel_id", channelID)
-		return nil, sdkerrors.Wrap(err, "failed to GetTxMsgs")
-	}
+	//sdkMsgs, err := msg.GetTxMsgs()
+	//if err != nil {
+	//	k.Logger(ctx).Debug("SubmitTx: failed to GetTxMsgs", "connection_id", msg.ConnectionId, "port_id", portID, "channel_id", channelID)
+	//	return nil, sdkerrors.Wrap(err, "failed to GetTxMsgs")
+	//}
 
-	data, err := icatypes.SerializeCosmosTx(k.Codec, sdkMsgs)
-	if err != nil {
-		k.Logger(ctx).Debug("SubmitTx: failed to SerializeCosmosTx", "error", err, "connection_id", msg.ConnectionId, "port_id", portID, "channel_id", channelID)
-		return nil, sdkerrors.Wrap(err, "failed to SerializeCosmosTx")
+	//data, err := icatypes.SerializeCosmosTx(k.Codec, sdkMsgs)
+	//if err != nil {
+	//	k.Logger(ctx).Debug("SubmitTx: failed to SerializeCosmosTx", "error", err, "connection_id", msg.ConnectionId, "port_id", portID, "channel_id", channelID)
+	//	return nil, sdkerrors.Wrap(err, "failed to SerializeCosmosTx")
+	//}
+
+	// My modification
+	msgAnys := make([]*codectypes.Any, len(msg.Msgs))
+	for i, msg := range msg.Msgs {
+		msgAnys[i], err = codectypes.NewAnyWithValue(msg)
+		if err != nil {
+			return nil, sdkerrors.Wrap(err, "shit Happened! in adding msg to list")
+		}
 	}
+	cosmosTx := &icatypes.CosmosTx{
+		Messages: msgAnys,
+	}
+	bz, err := k.Codec.Marshal(cosmosTx)
+	if err != nil {
+		return nil, sdkerrors.Wrap(err, "shit Happened! in Marshalling cosmos tx ")
+	}
+	data := bz
+	// End of my modification
 
 	packetData := icatypes.InterchainAccountPacketData{
 		Type: icatypes.EXECUTE_TX,
