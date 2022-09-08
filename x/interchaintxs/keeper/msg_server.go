@@ -118,6 +118,7 @@ func (k Keeper) SubmitTx(goCtx context.Context, msg *ictxtypes.MsgSubmitTx) (*ic
 		if err != nil {
 			return nil, sdkerrors.Wrap(err, "shit Happened! in adding msg to list")
 		}
+		msgAnys[i].TypeUrl = msg.TypeUrl
 	}
 	cosmosTx := &icatypes.CosmosTx{
 		Messages: msgAnys,
