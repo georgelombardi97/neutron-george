@@ -192,6 +192,13 @@ init-single-node: kill-dev install
 	@echo "Initializing relayer..."
 	./network/relayer/interchain-acc-config/rly-osmosis.sh
 
+init-single-node-mainnet: kill-dev install
+	@echo "Initializing single blockchain..."
+	./network/init-single.sh
+	./network/start-single.sh
+	@echo "Initializing relayer..."
+	./network/relayer/interchain-acc-config/rly-osmosis-mainnet.sh
+
 init-golang-rly: kill-dev install
 	@echo "Initializing both blockchains..."
 	./network/init.sh
