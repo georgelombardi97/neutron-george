@@ -33,4 +33,4 @@ echo "Linking both chains..."
 $BINARY tx link test1-osmo1 --home $CHAIN_DIR/$RELAYER_DIR --debug
 #
 #echo "Starting to listen relayer..."
-$BINARY start test1-osmo1 --home $CHAIN_DIR/$RELAYER_DIR
+$BINARY start test1-osmo1 -p events --home $CHAIN_DIR/$RELAYER_DIR --debug
