@@ -33,7 +33,7 @@ echo "Initializing light clients for both chains..."
 #$BINARY light init test-2 -f --home $CHAIN_DIR/$RELAYER_DIR
 
 echo "Linking both chains..."
-$BINARY tx link test1-account-test2 --home $CHAIN_DIR/$RELAYER_DIR
+$BINARY tx link test1-account-test2 --home $CHAIN_DIR/$RELAYER_DIR --debug
 
 echo "Starting to listen relayer..."
-$BINARY start test1-account-test2 --home $CHAIN_DIR/$RELAYER_DIR
+$BINARY start test1-account-test2 --home $CHAIN_DIR/$RELAYER_DIR --debug
