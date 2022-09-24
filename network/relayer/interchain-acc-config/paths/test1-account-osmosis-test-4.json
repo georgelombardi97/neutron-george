@@ -4,21 +4,14 @@
     "client-id": "",
     "connection-id": "",
     "channel-id": "",
-    "port-id": "transfer",
-    "order": "ordered",
-    "version": "ics27-1"
+    "port-id": "transfer"
   },
   "dst": {
     "chain-id": "osmo-test-4",
     "client-id": "",
     "connection-id": "",
     "channel-id": "",
-    "port-id": "transfer",
-    "order": "ordered",
-    "version": "ics27-1"
-  },
-  "strategy": {
-    "type": "naive"
+    "port-id": "transfer"
   }
 }
 

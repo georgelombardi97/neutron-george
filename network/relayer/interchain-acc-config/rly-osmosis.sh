@@ -34,7 +34,13 @@ $BINARY keys restore osmo-test-4 test-1 "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER
 #$BINARY light init osmo-test-4 -f --home $CHAIN_DIR/$RELAYER_DIR
 #$BINARY light init test-2 -f --home $CHAIN_DIR/$RELAYER_DIR
 
+echo "Balances"
+$BINARY q balance test-1 --home $CHAIN_DIR/$RELAYER_DIR --debug
+$BINARY q balance osmo-test-4 --home $CHAIN_DIR/$RELAYER_DIR --debug
+
+
 echo "Linking both chains..."
+
 #$BINARY tx link test1-account-osmosis-test-4 --home $CHAIN_DIR/$RELAYER_DIR
 $BINARY tx link test1-osmotest4 --home $CHAIN_DIR/$RELAYER_DIR --debug
 #
