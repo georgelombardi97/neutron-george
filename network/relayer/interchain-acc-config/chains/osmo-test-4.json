@@ -3,7 +3,7 @@
   "value": {
     "key": "test-1",
     "chain-id": "osmo-test-4",
-    "rpc-addr": "https://osmosis-testnet-rpc.allthatnode.com:26657",
+    "rpc-addr": "https://rpc.osmo-test.ccvalidators.com:26657",
     "account-prefix": "osmo",
     "keyring-backend": "test",
     "gas-adjustment": 2.0,
