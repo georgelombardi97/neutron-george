@@ -3,7 +3,7 @@
   "value": {
     "key": "test-1",
     "chain-id": "osmosis-1",
-    "rpc-addr": "https://osmosis-rpc.polkachu.com:26657",
+    "rpc-addr": "https://osmosis-rpc.lavenderfive.com:443",
     "account-prefix": "osmo",
     "keyring-backend": "test",
     "gas-adjustment": 2.0,
